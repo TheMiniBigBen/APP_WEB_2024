@@ -1,0 +1,83 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Establece la fuente del texto */
+    background-size: cover; /* Hace que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #333; /* Color del texto */
+    padding: 20px; /* Espacio interno alrededor del contenido del body */
+    text-align: center; /* Centra el texto en el body */
+    position: relative; /* Para el posicionamiento de la capa de fondo */
+}
+
+.fondo {
+    position: fixed; /* Mantiene la capa en la parte trasera */
+    top: 0; /* Posiciona la capa en la parte superior */
+    left: 0; /* Posiciona la capa en la parte izquierda */
+    width: 100%; /* Ancho del fondo igual al del viewport */
+    height: 100%; /* Altura del fondo igual al del viewport */
+    background-image: url('fondoCalculadora.avif'); /* Cambia la ruta a tu imagen */
+    background-size: cover; /* Hace que la imagen de fondo cubra toda la capa */
+    background-position: center; /* Centra la imagen de fondo */
+    filter: blur(10px); /* Aplica desenfoque solo a la capa de fondo */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+h2 {
+    color: #3cff00; /* Color del texto del encabezado */
+    background-color: #8400ff; /* Color de fondo del encabezado */
+    padding: 20px; /* Espacio interno alrededor del texto */
+    margin: 25px 0; /* Espacio externo arriba y abajo del encabezado */
+    font-size: 2em; /* Tamaño de la fuente del encabezado */
+    width: 100%; /* Asegura que el h2 cubra el 100% del ancho disponible */
+    text-align: center; /* Centra el texto del encabezado */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    font-weight: bold; /* Hace que el texto del encabezado sea más grueso */
+}
+
+hr {
+    border: 1px solid #00eeff65; /* Línea sólida con color */
+    height: 5px; /* Ajusta el grosor de la línea */
+    background-color: #000000; /* Cambia el color de fondo de la línea */
+    margin: 20px 0; /* Ajusta el margen superior e inferior de la línea */
+    width: 100%; /* Asegura que el <hr> cubra el 100% del ancho */
+}
+
+form {
+    background-color: #69d3f3b6; /* Color de fondo del formulario */
+    border-radius: 10px; /* Bordes redondeados para el formulario */
+    padding: 20px; /* Espacio interno alrededor del formulario */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
+    display: inline-block; /* Permite que el formulario tenga un ancho ajustable */
+    font-weight: bold; /* Hace que todo el texto en el formulario sea más grueso */
+}
+
+input[type="text"], select {
+    padding: 10px; /* Espacio interno para campos de texto y select */
+    margin: 10px; /* Espacio externo alrededor de los campos de texto y select */
+    border: 2px solid #0004ff; /* Borde de los campos de texto y select */
+    border-radius: 5px; /* Bordes redondeados para campos de texto y select */
+    width: 200px; /* Ancho fijo para campos de texto y select */
+    font-weight: bold; /* Hace que el texto en campos de texto y select sea más grueso */
+}
+
+button {
+    padding: 10px 20px; /* Espacio interno del botón */
+    background-color: #001aff; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none; /* Sin borde para el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-weight: bold; /* Hace que el texto en el botón sea más grueso */
+}
+
+button:hover {
+    background-color: #ff0000; /* Color de fondo del botón al pasar el ratón */
+}
+
+#resultado {
+    font-weight: bold; /* Hace que el texto del resultado sea más grueso */
+    color: #1900ff; /* Color del texto del resultado */
+    font-size: 2.2em; /* Aumenta el tamaño de la fuente del resultado */
+    margin-top: 20px; /* Margen superior para separar el resultado del resto */
+}

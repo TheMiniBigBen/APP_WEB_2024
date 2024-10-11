@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Castillo Nevarez</title>
+    <script src="Operaciones.js" defer></script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="fondo"></div>
+    <h2>Calculadora Básica Castillo</h2>
+    <hr>
+    <form>
+        Numero 1: <input type="number" id="numero1" step="any">
+        <br>
+        Numero 2: <input type="number" id="numero2" step="any">
+        <br>
+        Tipo de Operación: 
+        <select id="operacion">
+            <option value="sumar">Sumar</option>
+            <option value="restar">Restar</option>
+            <option value="multiplicar">Multiplicar</option>
+            <option value="dividir">Dividir</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="calcular()">Calcular</button>
+        <br><br>
+        <hr>
+        Resultado: <span id="resultado"></span>
+    </form>
+</body>
+</html>
