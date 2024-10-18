@@ -24,6 +24,7 @@ body {
 }
 
 h2 {
+    border-radius: 20px;
     color: #3cff00; /* Color del texto del encabezado */
     background-color: #8400ff; /* Color de fondo del encabezado */
     padding: 20px; /* Espacio interno alrededor del texto */
@@ -50,6 +51,7 @@ form {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra del formulario */
     display: inline-block; /* Permite que el formulario tenga un ancho ajustable */
     font-weight: bold; /* Hace que todo el texto en el formulario sea más grueso */
+    
 }
 
 input[type="text"], select {
@@ -77,7 +79,21 @@ button:hover {
 
 #resultado {
     font-weight: bold; /* Hace que el texto del resultado sea más grueso */
-    color: #1900ff; /* Color del texto del resultado */
+    color: #d0ff00; /* Color del texto del resultado */
     font-size: 2.2em; /* Aumenta el tamaño de la fuente del resultado */
     margin-top: 20px; /* Margen superior para separar el resultado del resto */
 }
+
+#resultado-contenedor {
+    margin-top: 20px;
+    padding: 10px;
+    border: 5px solid #ffffff;
+    width: 400px;
+    background-color: #0400ff;
+}
+#resultado-contenedor label {
+    color: #ffe600; /* Cambia este color al que prefieras */
+    font-size: 1 em; /* Ajusta el tamaño de la fuente si lo deseas */
+}
+
+
