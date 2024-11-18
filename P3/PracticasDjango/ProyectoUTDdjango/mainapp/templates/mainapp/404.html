@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página No Encontrada</title>
+    <script>
+      // Función para mostrar la alerta y redirigir
+      function showAlertAndRedirect() {
+        alert("Lo sentimos, la página que buscas no existe.");
+        window.location.href = "{% url 'index' %}"; // Redirige a la página de inicio
+      }
+
+      // Llama a la función cuando la página se carga
+      window.onload = showAlertAndRedirect;
+    </script>
+  </head>
+  <body>
+    <h1>404 - Página No Encontrada</h1>
+    <p>Lo sentimos, la página que buscas no existe.</p>
+    <p>Serás redirigido a la página de inicio.</p>
+  </body>
+</html>
