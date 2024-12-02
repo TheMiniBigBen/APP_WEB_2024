@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #FFB366, #FF7744);
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 80px;
+    background-color: #8B0000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #FF4500;
+    border-radius: 50%;
+}
+
+/* Main Content */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    color: #333;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/* Header Styles */
+h1 {
+    font-size: 24px;
+    color: #8B0000;
+}
+
+/* Action Section */
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-button {
+    background-color: #FF4500;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.add-button:hover {
+    background-color: #FF7744;
+}
+
+.search-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.clients-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.clients-table th,
+.clients-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.clients-table th {
+    background-color: #8B0000;
+    color: #fff;
+}
+
+.clients-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.clients-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.view-button,
+.edit-button,
+.delete-button {
+    text-decoration: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.view-button {
+    background-color: #FF7744;
+}
+
+.edit-button {
+    background-color: #4CAF50;
+}
+
+.delete-button {
+    background-color: #FF4500;
+}
+
+.view-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+    opacity: 0.8;
+}

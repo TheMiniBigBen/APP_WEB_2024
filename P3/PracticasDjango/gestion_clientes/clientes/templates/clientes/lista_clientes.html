@@ -1,0 +1,40 @@
+{% extends "clientes/base.html" %}
+
+{% block title %}Lista de Clientes{% endblock %}
+
+{% block content %}
+<h1>Clientes</h1>
+<div class="actions">
+    <a href="/clientes/agregar/" class="add-button">Añadir</a>
+    <input type="text" placeholder="Buscar" class="search-box">
+</div>
+<table class="clients-table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido Paterno</th>
+            <th>Apellido Materno</th>
+            <th>Teléfono</th>
+            <th>Direcciones</th>
+            <th>Correo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente.nombre }}</td>
+            <td>{{ cliente.apellido_paterno }}</td>
+            <td>{{ cliente.apellido_materno }}</td>
+            <td>{{ cliente.telefono }}</td>
+            <td><a href="/clientes/{{ cliente.id }}/direccion/" class="view-button">Ver</a></td>
+            <td>{{ cliente.correo }}</td>
+            <td>
+                <a href="{% url 'editar_cliente' cliente.id %}" class="edit-button">✏️</a>
+                <a href="{% url 'eliminar_cliente' cliente.id %}" class="delete-button">🗑️</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

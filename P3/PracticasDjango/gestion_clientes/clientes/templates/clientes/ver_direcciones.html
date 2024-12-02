@@ -1,0 +1,39 @@
+{% extends "clientes/base.html" %}
+
+{% block title %}Direcciones de {{ cliente.nombre }}{% endblock %}
+
+{% block content %}
+<h1>Direcciones de {{ cliente.nombre }} {{ cliente.apellido_paterno }}</h1>
+<div class="actions">
+    <a href="{% url 'agregar_direccion' cliente.id %}" class="add-button">Agregar Dirección</a>
+</div>
+<table class="clients-table">
+    <thead>
+        <tr>
+            <th>Calle</th>
+            <th>Colonia</th>
+            <th>Número</th>
+            <th>Código Postal</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for direccion in direcciones %}
+        <tr>
+            <td>{{ direccion.calle }}</td>
+            <td>{{ direccion.colonia }}</td>
+            <td>{{ direccion.numero }}</td>
+            <td>{{ direccion.codigo_postal }}</td>
+            <td>
+                <a href="{% url 'editar_direccion' cliente.id direccion.id %}" class="edit-button">✏️</a>
+                <a href="{% url 'eliminar_direccion' cliente.id direccion.id %}" class="delete-button">🗑️</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="5">No hay direcciones disponibles.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

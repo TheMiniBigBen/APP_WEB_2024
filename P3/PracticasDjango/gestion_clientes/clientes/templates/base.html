@@ -1,0 +1,35 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Clientes{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <ul>
+          <li>
+            <a href="#"><i class="icon">🏠</i></a>
+          </li>
+          <li>
+            <a href="#"><i class="icon">⚙️</i></a>
+          </li>
+          <li>
+            <a href="#"><i class="icon">📊</i></a>
+          </li>
+          <li>
+            <a href="/clientes/"><i class="icon">👥</i></a>
+          </li>
+          <li>
+            <a href="#"><i class="icon">📖</i></a>
+          </li>
+        </ul>
+      </aside>
+      <main class="content">{% block content %}{% endblock %}</main>
+    </div>
+  </body>
+</html>
